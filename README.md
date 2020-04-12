@@ -4,6 +4,7 @@
 (Claims/ClaimsIdentity/ClaimsPrincipal/Authorization).<br>
 
 #### Email 
-Used **Papercut-SMTP**.<br> 
-Realease **Papercut SMTP v5.7.0** [2020-04-05].<br>
-Link **(https://github.com/ChangemakerStudios/Papercut-SMTP/releases)**.<br>
+Environment: **development**.<br> 
+Used: **Papercut-SMTP**.<br> 
+Realease: **Papercut SMTP v5.7.0** [2020-04-05].<br>
+Link: **(https://github.com/ChangemakerStudios/Papercut-SMTP/releases)**.<br>
