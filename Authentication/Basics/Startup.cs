@@ -8,6 +8,7 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Mvc.Authorization;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 
@@ -61,7 +62,16 @@ namespace Basics
 
             services.AddScoped<IAuthorizationHandler, CustomRequireClaimHandler>();
 
-            services.AddControllersWithViews();
+            services.AddControllersWithViews(config =>
+            {
+                var defaultAuthBuilder = new AuthorizationPolicyBuilder();
+                var defaultAuthPolicy = defaultAuthBuilder
+                    .RequireAuthenticatedUser()
+                    .Build();
+
+                // global authorization filter
+                config.Filters.Add(new AuthorizeFilter(defaultAuthPolicy));
+            });
         }
 
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
