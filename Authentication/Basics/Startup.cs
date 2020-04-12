@@ -4,6 +4,7 @@ using System.Linq;
 using System.Security.Claims;
 using System.Threading.Tasks;
 using Basics.AuthorizationRequirements;
+using Basics.Controllers;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -61,6 +62,7 @@ namespace Basics
             });
 
             services.AddScoped<IAuthorizationHandler, CustomRequireClaimHandler>();
+            services.AddScoped<IAuthorizationHandler, CookieJarAuthorizationHandler>();
 
             services.AddControllersWithViews(config =>
             {
@@ -70,7 +72,7 @@ namespace Basics
                     .Build();
 
                 // global authorization filter
-                config.Filters.Add(new AuthorizeFilter(defaultAuthPolicy));
+                //config.Filters.Add(new AuthorizeFilter(defaultAuthPolicy));
             });
         }
 
