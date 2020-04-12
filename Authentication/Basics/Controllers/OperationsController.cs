@@ -26,6 +26,7 @@ namespace Basics.Controllers
         }
     }
 
+    // Handler
     public class CookieJarAuthorizationHandler 
         : AuthorizationHandler<OperationAuthorizationRequirement, CookieJar>
     {
@@ -53,6 +54,7 @@ namespace Basics.Controllers
         }
     }
 
+    // Centralized 
     public static class CookieJarAuthOperations
     {
         public static OperationAuthorizationRequirement Open => new OperationAuthorizationRequirement
@@ -61,6 +63,7 @@ namespace Basics.Controllers
         };
     }
 
+    // This is the operation grab
     public static class CookieJarOperations
     {
         public static string Open => "Open";
@@ -69,6 +72,7 @@ namespace Basics.Controllers
         public static string Look => "Look";
     }
 
+    // This is a resource
     public class CookieJar
     {
         public string Name { get; set; }
