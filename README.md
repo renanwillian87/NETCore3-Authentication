@@ -8,7 +8,7 @@ Link: **(https://github.com/ChangemakerStudios/Papercut-SMTP/releases)**.<br>
 
 ## Branchs
 
-## Basics - Authentication
+### Basics - Authentication
  - Claims
  - ClaimsIdentity
  - ClaimsPrincipal
