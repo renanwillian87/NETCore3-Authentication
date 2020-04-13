@@ -23,7 +23,7 @@ Building Blocks:<br>
 ### AuthorizationConcepts 
  - Global Authorization Filter
  - Operation Authorization Requirement
-  - Resource-based authorization(https://jakeydocs.readthedocs.io/en/latest/security/authorization/resourcebased.html)
+ 	- Resource-based authorization(https://jakeydocs.readthedocs.io/en/latest/security/authorization/resourcebased.html)
  - Claims Transformation
  - Authorization Police Proviver	
 	 
