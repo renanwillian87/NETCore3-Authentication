@@ -3,9 +3,15 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30001.183
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Basics", "Basics\Basics.csproj", "{9571F141-949E-48F0-9077-C3D29EBCDD58}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Basics", "Basics\Basics.csproj", "{9571F141-949E-48F0-9077-C3D29EBCDD58}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IdentityExample", "IdentityExample\IdentityExample.csproj", "{157B0969-3D39-4F5E-9D02-831433699F38}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IdentityExample", "IdentityExample\IdentityExample.csproj", "{157B0969-3D39-4F5E-9D02-831433699F38}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Basic", "Basic", "{679FAC86-60ED-4228-938B-7492632AFF2A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "oauth", "oauth", "{61F88454-7E2B-4F96-A1A4-C2E8177D3694}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Server", "Server\Server.csproj", "{E1B38044-E885-4820-950E-9D26DD918D0D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,9 +27,18 @@ Global
 		{157B0969-3D39-4F5E-9D02-831433699F38}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{157B0969-3D39-4F5E-9D02-831433699F38}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{157B0969-3D39-4F5E-9D02-831433699F38}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E1B38044-E885-4820-950E-9D26DD918D0D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E1B38044-E885-4820-950E-9D26DD918D0D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E1B38044-E885-4820-950E-9D26DD918D0D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E1B38044-E885-4820-950E-9D26DD918D0D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{9571F141-949E-48F0-9077-C3D29EBCDD58} = {679FAC86-60ED-4228-938B-7492632AFF2A}
+		{157B0969-3D39-4F5E-9D02-831433699F38} = {679FAC86-60ED-4228-938B-7492632AFF2A}
+		{E1B38044-E885-4820-950E-9D26DD918D0D} = {61F88454-7E2B-4F96-A1A4-C2E8177D3694}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {0EA8227E-585A-47B1-82C7-AA8B6407FF45}
