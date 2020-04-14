@@ -27,10 +27,17 @@ Building Blocks:<br>
  - Claims Transformation
  - Authorization Police Proviver
  
- ### RazorAuthorization
+### RazorAuthorization
  - Razor Pages
  	- Authorize Page
 	- Authorize Folder
 	- Anonymous Page
 	
-
+### OAuthJWTBearer
+ - Create JwtSecurityToken with claims
+ - Validate JwtToken using TokenValidationParameters
+ - Apply access_token sended by querystring to header using JwtBearerEvents
+ - Create decode parts to access_token like (https://jwt.io)
+	- Header part
+	- Payload part
+	
