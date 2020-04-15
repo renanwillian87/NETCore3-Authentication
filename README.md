@@ -6,6 +6,9 @@ Used: **Papercut-SMTP**<br>
 Realease: **Papercut SMTP v5.7.0** [2020-04-05]<br>
 Link: **(https://github.com/ChangemakerStudios/Papercut-SMTP/releases)**<br>
 
+### OAUTH 2.0 Documentation
+Link: **(https://tools.ietf.org/html/draft-ietf-oauth-v2-15)**
+
 ## Branchs
 
 ### Basics - Authentication
@@ -34,10 +37,18 @@ Building Blocks:<br>
 	- Anonymous Page
 	
 ### OAuthJWTBearer
+ - Create a basic OAuthServer
  - Create JwtSecurityToken with claims
  - Validate JwtToken using TokenValidationParameters
  - Apply access_token sended by querystring to header using JwtBearerEvents
  - Create decode parts to access_token like (https://jwt.io)
 	- Header part
 	- Payload part
+	
+### OAuthClient
+ - Create a basic OAuthClient
+ - access_token
+ - Endpoints
+ 	- Authorize
+	- Token
 	
