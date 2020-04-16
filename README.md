@@ -51,4 +51,9 @@ Building Blocks:<br>
  - Endpoints
  	- Authorize
 	- Token
-	
+
+### SecuringTheAPI
+ - Request a HTTP Client
+
+
+
