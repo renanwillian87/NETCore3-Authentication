@@ -55,5 +55,8 @@ Building Blocks:<br>
 ### SecuringTheAPI
  - Request a HTTP Client
 
+### RefreshToken
+ - Implemented grant_type "refresh_token"
+ - Update access_token and refresh_token stored HTTPContext
 
 
