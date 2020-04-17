@@ -47,10 +47,11 @@ namespace Server.Controllers
         }
 
         public async Task<IActionResult> Token(
-            string granty_type, // flow of access_token request
+            string grant_type, // flow of access_token request
             string code, // confirmation of the authentication process
             string redirect_uri,
-            string client_id)
+            string client_id,
+            string refresh_token)
         {
             // some mechanism for validating the code
 
@@ -71,7 +72,9 @@ namespace Server.Controllers
                 Constants.Audiance,
                 claims,
                 notBefore: DateTime.Now,
-                expires: DateTime.Now.AddHours(1),
+                expires: grant_type == "refresh_token"
+                    ? DateTime.Now.AddMinutes(5)
+                    : DateTime.Now.AddMilliseconds(1),
                 signingCredentials);
 
             var access_token = new JwtSecurityTokenHandler().WriteToken(token);
@@ -80,7 +83,8 @@ namespace Server.Controllers
             {
                 access_token,
                 token_type = "Bearer",
-                raw_claim = "oauthTutorial"
+                raw_claim = "oauthTutorial",
+                refresh_token = "RefreshTokenSampleValueSomething77" // this implementation is simple because the correct way uses a DB to storage the refresh_token
             };
 
             var responseJson = JsonConvert.SerializeObject(responseObject);
