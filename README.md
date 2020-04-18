@@ -1,4 +1,4 @@
-# NETCore3-Authentication
+# ##NETCore3-Authentication##
 
 ### Email 
 Environment: **development**<br> 
@@ -9,6 +9,8 @@ Link: **(https://github.com/ChangemakerStudios/Papercut-SMTP/releases)**<br>
 ### OAUTH 2.0 Documentation
 Link: **(https://tools.ietf.org/html/draft-ietf-oauth-v2-15)**
 
+# 1 - Basic / Identity
+
 ## Branchs
 
 ### Basics - Authentication
@@ -16,6 +18,10 @@ Link: **(https://tools.ietf.org/html/draft-ietf-oauth-v2-15)**
  - ClaimsIdentity
  - ClaimsPrincipal
  - Authorization
+ 
+# 2 - Basic / Authentication
+
+## Branchs 
  
 ### BasicsAuthentication&Authorization
 Building Blocks:<br>
@@ -35,6 +41,10 @@ Building Blocks:<br>
  	- Authorize Page
 	- Authorize Folder
 	- Anonymous Page
+	
+# 3 - OAuth
+
+## Branchs
 	
 ### OAuthJWTBearer
  - Create a basic OAuthServer
@@ -58,5 +68,15 @@ Building Blocks:<br>
 ### RefreshToken
  - Implemented grant_type "refresh_token"
  - Update access_token and refresh_token stored HTTPContext
+ 
+# 4 - Identity Server 4
+
+## Branchs
+ 
+### ClientCredentials
+ - Add Identity Server 4
+ - Identity Model
+ - Discovery Document
+ - Request Client Credentials Token
 
 
