@@ -87,3 +87,10 @@ Building Blocks:<br>
  - Pages Login & Register
  
  
+### IdentityServer4_Cookies_Token_Claims
+ - UserManager Add Claim
+ - Config Scopes
+ - Delete Claims
+ - Map Claim
+ 
+	
