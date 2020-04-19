@@ -81,3 +81,9 @@ Building Blocks:<br>
  - Request Client Credentials Token
 
 
+### AuthorizationCodeFlow
+ - Add IdentityResource: OpenId, Profile
+ - Scope: OpenId
+ - Pages Login & Register
+ 
+ 
