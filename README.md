@@ -1,14 +1,30 @@
 # ##NETCore3-Authentication##
 ## Course -> RawCoding
 
+## Tools:
 ### Email 
 Environment: **development**<br> 
 Used: **Papercut-SMTP**<br> 
 Realease: **Papercut SMTP v5.7.0** [2020-04-05]<br>
 Link: **(https://github.com/ChangemakerStudios/Papercut-SMTP/releases)**<br>
 
-### OAUTH 2.0 Documentation
-Link: **(https://tools.ietf.org/html/draft-ietf-oauth-v2-15)**
+##  Documentation
+ - **OAUTH 2.0** : https://tools.ietf.org/html/draft-ietf-oauth-v2-15
+ - **OpenID** : https://openid.net/specs/openid-connect-core-1_0.html
+
+## OpenID Flow Types:
+ - Authorization Code
+ - Implicit
+ - Resource Owner Password Credentials
+ - Client Credentials
+ - Hybrid Flow
+
+## Tokens:
+ - **id_token** includes information about the user. The app then parses the token's contents and uses the information (including details like name and profile picture) to customize the user experience.
+ - **access_token** are used to inform an API that the bearer of the token has been authorized to access the API and perform a predetermined set of actions 
+ - **refresh_token** is a special kind of token used to obtain a renewed Access Token. 
+
+
 
 # 1 - Basic / Identity
 
