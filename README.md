@@ -25,12 +25,9 @@ Link: **(https://github.com/ChangemakerStudios/Papercut-SMTP/releases)**<br>
  - **refresh_token** is a special kind of token used to obtain a renewed Access Token. 
 
 
-
 # 1 - Basic / Identity
 
-## Branchs
-
-### Basics - Authentication
+### Branch: Basics - Authentication
  - Claims
  - ClaimsIdentity
  - ClaimsPrincipal
@@ -38,32 +35,28 @@ Link: **(https://github.com/ChangemakerStudios/Papercut-SMTP/releases)**<br>
  
 # 2 - Basic / Authentication
 
-## Branchs 
- 
-### BasicsAuthentication&Authorization
+### Branch: BasicsAuthentication&Authorization
 Building Blocks:<br>
  - Authorization Requirements
  - Authorization Policies
  - Authorization Handlers
  
-### AuthorizationConcepts 
+### Branch: AuthorizationConcepts 
  - Global Authorization Filter
  - Operation Authorization Requirement
  	- Resource-based authorization(https://jakeydocs.readthedocs.io/en/latest/security/authorization/resourcebased.html)
  - Claims Transformation
  - Authorization Police Proviver
  
-### RazorAuthorization
+### Branch: RazorAuthorization
  - Razor Pages
  	- Authorize Page
 	- Authorize Folder
 	- Anonymous Page
 	
 # 3 - OAuth
-
-## Branchs
 	
-### OAuthJWTBearer
+### Branch: OAuthJWTBearer
  - Create a basic OAuthServer
  - Create JwtSecurityToken with claims
  - Validate JwtToken using TokenValidationParameters
@@ -72,44 +65,46 @@ Building Blocks:<br>
 	- Header part
 	- Payload part
 	
-### OAuthClient
+### Branch: OAuthClient
  - Create a basic OAuthClient
  - access_token
  - Endpoints
  	- Authorize
 	- Token
 
-### SecuringTheAPI
+### Branch: SecuringTheAPI
  - Request a HTTP Client
 
-### RefreshToken
+### Branch: RefreshToken
  - Implemented grant_type "refresh_token"
  - Update access_token and refresh_token stored HTTPContext
  
 # 4 - Identity Server 4
-
-## Branchs
  
-### ClientCredentials
+### Branch: ClientCredentials
  - Add Identity Server 4
  - Identity Model
  - Discovery Document
  - Request Client Credentials Token
 
-
-### AuthorizationCodeFlow
+### Branch: AuthorizationCodeFlow
  - Add IdentityResource: OpenId, Profile
  - Scope: OpenId
  - Pages Login & Register
- 
- 
-### IdentityServer4_Cookies_Token_Claims
+  
+### Branch: IdentityServer4_Cookies_Token_Claims
  - UserManager Add Claim
  - Config Scopes
  - Delete Claims
  - Map Claim
  
- ### IdentityServer4_RefreshToken
+ ### Branch: IdentityServer4_RefreshToken
  - Implemented Refresh Token
+ 
+ ### Branch: IdentityServer4_ImplicitFlow
+ - Implicit Flow is good for clients that use agent(Web Browser or Mobile APP)
+ - Not allowed refresh token
+ - Create Client Implicit
+ - Create Javascript authentication
  
 	
