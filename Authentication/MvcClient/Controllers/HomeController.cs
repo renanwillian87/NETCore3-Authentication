@@ -2,11 +2,13 @@
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.IdentityModel.Tokens.Jwt;
 using System.Linq;
 using System.Net.Http;
+using System.Text;
 using System.Threading.Tasks;
 
 namespace MvcClient.Controllers
@@ -37,7 +39,9 @@ namespace MvcClient.Controllers
             var _idToken = new JwtSecurityTokenHandler().ReadJwtToken(idToken);
 
             var result = await GetSecret(accessToken);
-
+            
+            await RefreshAccessToken();
+            
             return View();
         }
 
@@ -52,6 +56,37 @@ namespace MvcClient.Controllers
             var content = await response.Content.ReadAsStringAsync();
 
             return content;
+        }
+
+        private async Task RefreshAccessToken()
+        {
+            var serverClient = _httpClientFactory.CreateClient();
+            var discoveryDocument = await serverClient.GetDiscoveryDocumentAsync("https://localhost:44333/");
+
+            var accessToken = await HttpContext.GetTokenAsync("access_token");
+            var idToken = await HttpContext.GetTokenAsync("id_token");
+            var refreshToken = await HttpContext.GetTokenAsync("refresh_token");
+            var refreshTokenClient = _httpClientFactory.CreateClient();
+
+            var tokenResponse = await refreshTokenClient.RequestRefreshTokenAsync(new RefreshTokenRequest
+            {
+                Address = discoveryDocument.TokenEndpoint,
+                RefreshToken = refreshToken,
+                ClientId = "client_id_mvc",
+                ClientSecret = "client_secret_mvc"
+            });
+
+            var authInfo = await HttpContext.AuthenticateAsync("Cookie");
+
+            authInfo.Properties.UpdateTokenValue("access_token", tokenResponse.AccessToken);
+            authInfo.Properties.UpdateTokenValue("id_token", tokenResponse.IdentityToken);
+            authInfo.Properties.UpdateTokenValue("refresh_token", tokenResponse.RefreshToken);
+
+            await HttpContext.SignInAsync("Cookie", authInfo.Principal, authInfo.Properties);
+
+            var accessTokenDifferent = !accessToken.Equals(tokenResponse.AccessToken);
+            var idTokenDifferent = !accessToken.Equals(tokenResponse.IdentityToken);
+            var refreshTokenDifferent = !accessToken.Equals(tokenResponse.RefreshToken);
         }
     }
 }
