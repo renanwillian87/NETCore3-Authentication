@@ -107,4 +107,11 @@ Building Blocks:<br>
  - Create Client Implicit
  - Create Javascript authentication
  
+ ### IdentityServer4_oidcclientjs
+ - **Project**: https://github.com/IdentityModel/oidc-client-js
+ - **Wiki**: https://github.com/IdentityModel/oidc-client-js/wiki
+ - Configure oidc-client-js
+ - IdentityServer4 Config Client AllowedCorsOrigins
+ - API allow CORS
 	
+
