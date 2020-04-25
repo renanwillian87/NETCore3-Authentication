@@ -117,3 +117,11 @@ Building Blocks:<br>
 ### IdentityServer4_ImplicityFlow_PersistanceClaimsRefreshing
  - Persist in Browser LocalStorage
  - Axios interceptor Refresh Token
+ 
+### IdentityServer4_EFCoreSetup
+ - **Docs**: http://docs.identityserver.io/en/release/quickstarts/8_entity_framework.html
+ - EntityFramework Core Setup
+ - Migration 
+ 
+ 
+ 
