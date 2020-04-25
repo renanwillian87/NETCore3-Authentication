@@ -98,20 +98,22 @@ Building Blocks:<br>
  - Delete Claims
  - Map Claim
  
- ### Branch: IdentityServer4_RefreshToken
+### Branch: IdentityServer4_RefreshToken
  - Implemented Refresh Token
  
- ### Branch: IdentityServer4_ImplicitFlow
+### Branch: IdentityServer4_ImplicitFlow
  - Implicit Flow is good for clients that use agent(Web Browser or Mobile APP)
  - Not allowed refresh token
  - Create Client Implicit
  - Create Javascript authentication
  
- ### IdentityServer4_oidcclientjs
+### IdentityServer4_oidcclientjs
  - **Project**: https://github.com/IdentityModel/oidc-client-js
  - **Wiki**: https://github.com/IdentityModel/oidc-client-js/wiki
  - Configure oidc-client-js
  - IdentityServer4 Config Client AllowedCorsOrigins
  - API allow CORS
 	
-
+### IdentityServer4_ImplicityFlow_PersistanceClaimsRefreshing
+ - Persist in Browser LocalStorage
+ - Axios interceptor Refresh Token
