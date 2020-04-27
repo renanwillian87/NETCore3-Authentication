@@ -49,6 +49,7 @@ namespace IdentityServer
                     AllowedGrantTypes =  GrantTypes.Code,
 
                     RedirectUris = { "https://localhost:44395/signin-oidc" },
+                    PostLogoutRedirectUris = { "https://localhost:44395/Home/Index" },
 
                     AllowedScopes = { 
                         "ApiOne", 
@@ -70,6 +71,7 @@ namespace IdentityServer
                     AllowedGrantTypes = GrantTypes.Implicit,
                     
                     RedirectUris = { "https://localhost:44324/Home/SignIn" },
+                    PostLogoutRedirectUris = { "https://localhost:44324/Home/Index" },
                     AllowedCorsOrigins = { "https://localhost:44324" },
 
                     AllowedScopes =
