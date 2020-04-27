@@ -123,5 +123,9 @@ Building Blocks:<br>
  - EntityFramework Core Setup
  - Migration 
  
- 
+### IdentityServer4_SignOut_Certificates
+ - Implemented SignOut for MVC and JS
+ - Generate Certificate via PowerShell
+ - **Docs**: https://docs.microsoft.com/pt-br/archive/blogs/kaevans/using-powershell-with-certificates
+	
  
