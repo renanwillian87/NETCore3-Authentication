@@ -5,6 +5,7 @@ using System.Linq;
 using System.Security.Cryptography.X509Certificates;
 using System.Threading.Tasks;
 using IdentityServer.Data;
+using IdentityServer.Options;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
@@ -56,8 +57,8 @@ namespace IdentityServer
 
             var assembly = typeof(Startup).Assembly.GetName().Name;
 
-            var filePath = Path.Combine(_env.ContentRootPath, "is_cert.pfx");
-            var certificate = new X509Certificate2(filePath, "%t¨¨&90dhjdshj#$@djs");
+            //var filePath = Path.Combine(_env.ContentRootPath, "is_cert.pfx");
+            //var certificate = new X509Certificate2(filePath, "%t¨¨&90dhjdshj#$@djs");
 
             services.AddIdentityServer()
                 .AddAspNetIdentity<IdentityUser>()
@@ -71,11 +72,20 @@ namespace IdentityServer
                     options.ConfigureDbContext = b => b.UseSqlServer(connectionString,
                         sql => sql.MigrationsAssembly(assembly));
                 })
-                .AddSigningCredential(certificate);
+                //.AddSigningCredential(certificate);
                 //.AddInMemoryApiResources(Configuration.GetApis())
                 //.AddInMemoryIdentityResources(Configuration.GetIdentityResources())
                 //.AddInMemoryClients(Configuration.GetClients())
-                //.AddDeveloperSigningCredential();
+                .AddDeveloperSigningCredential();
+
+            var facebookOption = _config.GetSection("Authentication:Facebook").Get<FacebookAuthenticationOption>();
+
+            services.AddAuthentication()
+                .AddFacebook(config =>
+                {
+                    config.AppId = facebookOption.AppId;
+                    config.AppSecret = facebookOption.AppSecret;
+                });
 
             services.AddControllersWithViews();
         }
