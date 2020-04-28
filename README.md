@@ -128,4 +128,8 @@ Building Blocks:<br>
  - Generate Certificate via PowerShell
  - **Docs**: https://docs.microsoft.com/pt-br/archive/blogs/kaevans/using-powershell-with-certificates
 	
- 
+### IdentityServer4_ExternalProviders
+ - Implemented Provider Facebook
+- **Link**: https://developers.facebook.com/
+	
+	
